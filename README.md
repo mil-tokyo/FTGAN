@@ -19,9 +19,9 @@ In AAAI, 2018 [arxiv](https://arxiv.org/pdf/1711.09618.pdf)
 
 2. Resize all frames (76*76) and convert to npy file.
 
-3. Setup dataset directory as follows.
+3. Setup dataset directory as follows.<p>
 
-
+```
     PennAction/
         npy_76/
             0001.npy
@@ -33,7 +33,7 @@ In AAAI, 2018 [arxiv](https://arxiv.org/pdf/1711.09618.pdf)
             0002.npy
             ...
             2326.npy
-
+```
 
 
 #### Train FlowGAN
@@ -53,22 +53,11 @@ python train.py --gpu=0 --root '/path/to/dataset/'
 ```
 
 ### Example of Results
-<div style="text-align: center;">
-<img src="data/demo/penn_texgan.gif">
-</div>
 
-<div style="text-align: center;">
-TextureGAN: Video Generation Results from Ground Truth Optical Flow and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />
-</div>
+| TextureGAN (from GT Flow and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />) |FTGAN (from <img src="https://latex.codecogs.com/gif.latex?z_{flow}" title="z_{flow}" /> and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />)|
+|:-----------|:------------:|
+|![](data/demo/penn_texgan.gif)|![](data/demo/penn_ftgan.gif)|
 
-<div style="text-align: center;">
-<img src="data/demo/penn_ftgan.gif">
-</div>
-
-<div style="text-align: center;">
-FTGAN: Video Generation Results from <img src="https://latex.codecogs.com/gif.latex?z_{flow}" title="z_{flow}" /> and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />
-
-</div>
 
 ### Citing FTGAN
 If you find FTGAN useful in your research, please consider citing:
