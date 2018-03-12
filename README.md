@@ -53,13 +53,14 @@ python train.py --gpu=0 --root '/path/to/dataset/'
 ```
 
 ### Example of Results
-<div style="text-align: center;">
 <img src="data/demo/penn_texgan.gif" align="center"><p>
+
+<div style="text-align: center;">
 TextureGAN: Video Generation Results from Ground Truth Optical Flow and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />
 </div>
 
-<div style="text-align: center;">
 <img src="data/demo/penn_ftgan.gif" align="center"><p>
+<div style="text-align: center;">
 FTGAN: Video Generation Results from <img src="https://latex.codecogs.com/gif.latex?z_{flow}" title="z_{flow}" /> and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />
 
 </div>
