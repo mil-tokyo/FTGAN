@@ -54,15 +54,15 @@ python train.py --gpu=0 --root '/path/to/dataset/'
 
 ### Example of Results
 <div style="text-align: center;">
-<img src="data/demo/penn_texgan.gif"><p>
-TextureGAN: Video Generation Results from Ground Truth Optical Flow and $z_{tex}$
+<img src="data/demo/penn_texgan.gif" align="center"><p>
+TextureGAN: Video Generation Results from Ground Truth Optical Flow and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />
 </div>
 
 <div style="text-align: center;">
-<img src="data/demo/penn_ftgan.gif"><p>
-FTGAN: Video Generation Results from $z_{flow}$ and $z_{tex}$
-</div>
+<img src="data/demo/penn_ftgan.gif" align="center"><p>
+FTGAN: Video Generation Results from <img src="https://latex.codecogs.com/gif.latex?z_{flow}" title="z_{flow}" /> and <img src="https://latex.codecogs.com/gif.latex?z_{tex}" title="z_{tex}" />
 
+</div>
 
 ### Citing FTGAN
 If you find FTGAN useful in your research, please consider citing:
