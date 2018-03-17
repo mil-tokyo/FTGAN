@@ -9,13 +9,8 @@ from chainer import cuda
 import chainer.functions as F
 import chainer.links as L
 
-import six
-import math
-
 from chainer import Variable
 from custom_opt import l1_penalty
-
-
 
 class Generator(chainer.Chain):
     def __init__(self, video_len = 32):

@@ -54,7 +54,7 @@ def gan_training(args, train, test, model_path):
     else:
         train_iter = chainer.iterators.SerialIterator(train, args.batchsize)
 
-    # Prepare GANGAN model, defined in net.py
+    # Prepare Flow and Texture GAN model, defined in net.py
     gen_flow = net.FlowGenerator()
     dis_flow = net.FlowDiscriminator()
     gen_tex = net.Generator(args.dimz)

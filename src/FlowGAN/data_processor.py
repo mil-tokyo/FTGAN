@@ -3,7 +3,6 @@ from __future__ import print_function
 
 import chainer
 import random
-from PIL import Image
 import numpy as np
 import scipy.misc
 import os

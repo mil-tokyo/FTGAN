@@ -10,9 +10,6 @@ from chainer import cuda
 import chainer.functions as F
 import chainer.links as L
 
-import six
-import math
-
 from chainer import Variable
 from custom_opt import l1_penalty, average_temporal_pooling_2d
 

@@ -8,23 +8,15 @@ Note that * indicates equal contribution.
 """
 from __future__ import print_function
 import argparse
-
 import matplotlib
 
 # Disable interactive backend
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-import six
-import h5py
 import os
-from PIL import Image
-import pickle
-import random
-import sys
 
 import chainer
-from chainer import computational_graph
 from chainer import cuda
 from chainer import optimizers
 from chainer import serializers
@@ -54,7 +46,7 @@ def gan_training(args, train):
     else:
         train_iter = chainer.iterators.SerialIterator(train, args.batchsize)
 
-    # Prepare FlowGAN model, defined in net.py
+    # Prepare Flow GAN model, defined in net.py
     gen = net.Generator(video_len=args.video_len)
     dis = net.Discriminator()
 
