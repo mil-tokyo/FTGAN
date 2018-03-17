@@ -1,19 +1,34 @@
 # Flow and Texture GAN (FTGAN)
-### Publication
-Hierarchical Video Generation from Orthogonal Information: Optical Flow and Texture  
+## Publication
+Hierarchical Video Generation from Orthogonal Information: Optical Flow and Texture ([arxiv](https://arxiv.org/pdf/1711.09618.pdf))
 [Katsunori Ohnishi](http://katsunoriohnishi.github.io/)\*, Shohei Yamamoto\*, [Yoshitaka Ushiku](http://www.mi.t.u-tokyo.ac.jp/ushiku/), [Tatsuya Harada](http://www.mi.t.u-tokyo.ac.jp/harada/).  
-In AAAI, 2018 [arxiv](https://arxiv.org/pdf/1711.09618.pdf)
+In AAAI, 2018
 \* indicates equal contribution.  
 
-### Pipeline
+## Pipeline
 <div style="text-align: center;">
 <img src="data/demo/pipeline.png">
 </div>
 
-### Requirements
+## Requirements
+Python 2.7
+
 [Chainer 3.1.0+](https://github.com/chainer/chainer)
 
-### Dataset
+In addition, please `pip install` the following packages:
+- `matplotlib`
+- `pillow`
+- `scipy`
+
+## Demo
+You can test FTGAN using pretrained model as follows:
+```
+cd src/joint_learning
+python demo.py --gpu=0
+```
+
+## Train
+### Preprocess
 
 1. Download the dataset([Penn Action](http://dreamdragon.github.io/PennAction/))and extract optical flow.
 
@@ -36,17 +51,17 @@ In AAAI, 2018 [arxiv](https://arxiv.org/pdf/1711.09618.pdf)
 ```
 
 
-#### Train FlowGAN
+### Train FlowGAN
 ```
 cd src/FlowGAN
 python train.py --gpu=0 --root '/path/to/dataset/'
 ```
-#### Train TextureGAN
+### Train TextureGAN
 ```
 cd src/TextureGAN
 python train.py --gpu=0 --root '/path/to/dataset/'
 ```
-#### Joint learning
+### Joint learning
 ```
 cd src/joint_learning
 python train.py --gpu=0 --root '/path/to/dataset/'
@@ -59,14 +74,14 @@ python train.py --gpu=0 --root '/path/to/dataset/'
 |![](data/demo/penn_texgan.gif)|![](data/demo/penn_ftgan.gif)|
 
 
-### Citing FTGAN
+## Citing FTGAN
 If you find FTGAN useful in your research, please consider citing:
 
 ```
-@article{ohnishi2018ftgan,
+@inproceedings{ohnishi2018ftgan,
   title={Hierarchical Video Generation from Orthogonal Information: Optical Flow and Texture},
   author={Ohnishi, Katsunori and Yamamoto, Shohei and Ushiku, Yoshitaka and Harada, Tatsuya},
-  journal={AAAI},
+  booktitle={AAAI},
   year={2018}
 }
 ```
