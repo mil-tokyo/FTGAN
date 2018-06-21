@@ -26,6 +26,8 @@ You can test FTGAN using pretrained model as follows:
 cd src/joint_learning
 python demo.py --gpu=0
 ```
+If you failed to run because of model loading, please install [git-lfs](https://github.com/git-lfs/git-lfs/wiki/Installation) and run `git lfs clone git@github.com:mil-tokyo/FTGAN.git`, or please download models from [Google Drive](https://drive.google.com/open?id=1elg-Wl57up2yTbJhqb26PlqWLagOLVDg).
+
 
 ## Train
 ### Preprocess
